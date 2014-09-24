@@ -1,6 +1,7 @@
 #!/bin/sh
 
 
-crontab -l -u root | echo "* */4 * * *    `pwd`/backupMongodb.sh vizir-prod" | crontab -u root -
-#echo "0 0 1 0 0 /`pwd`/backupMongodb.sh vizir-preprod" >> /etc/crontab
+crontab -l -u root | echo "0 6 * * *    `pwd`/backupMongodb.sh vizir-prod" | crontab -u root -
+crontab -l -u root | echo "0 6 * * *    `pwd`/backupMongodb.sh vizir-dev" | crontab -u root -
+
 
